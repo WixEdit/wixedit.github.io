@@ -1,7 +1,7 @@
 # username/repository
-id: mistic100/jekyll-bootstrap-doc
+id: WixEdit/WixEdit
 # name of the software
-name: WixEdit Website
+name: WixEdit
 # current version of the software
 version: 7.6.*
 # licence of the software
@@ -17,7 +17,9 @@ favicon: png
 # download.cdn.img is optional
 download:
   popup: true
-  url: https://github.com/WixEdit/WixEdit/archive/master.zip
+#  url: https://github.com/WixEdit/WixEdit/archive/master.zip
+  gh:
+    url: https://github.com/WixEdit/WixEdit/archive/master.zip
 #  bower: jekyll-bootstrap-doc
 #  npm: jekyll-bootstrap-doc
 #  cdn:
@@ -27,6 +29,8 @@ download:
 
 # set this to true to replace the generated header navbar by _includes/navbar.html
 customNavBar: false
+
+permalink: pretty
 
 # list of additional links on the right of the top menu
 headerLinks:
@@ -38,7 +42,7 @@ footerLinks:
   - title: GitHub
     url: https://github.com/WixEdit/WixEdit
   - title: Issues
-    url:https://github.com/WixEdit/WixEdit/issues?state=open
+    url: https://github.com/WixEdit/WixEdit/issues?state=open
 
 # header
 header:

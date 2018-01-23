@@ -14,6 +14,21 @@
   </div>
   {% endif %}
 
+  {% if site.download.gh and site.download.gh.url %}
+  <div class="col-sm-6">
+    <div class="panel panel-default">
+      <div class="panel-heading">Sources download</div>
+      <div class="panel-body">
+        <p>Download sources from Github repository.</p>
+        <a href="{{site.download.gh.url}}" class="btn btn-lg btn-outline">
+          <i class="glyphicon glyphicon-save"></i>
+          Download
+        </a>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+
   {% if site.download.cdn and site.download.cdn.url %}
   <div class="col-sm-6">
     <div class="panel panel-default">
