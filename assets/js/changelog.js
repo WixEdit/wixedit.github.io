@@ -24,8 +24,8 @@
    * @param {object} release
    */
   function appendRelease(release) {
-    // Format date
-    var date = moment(release.published_at).format('LL');
+    // Format date - rewrite history for SF migration to GH.
+    var date = moment(release.published_at.replace('2018-01-24T19:37:05Z','2011-03-18T19:37:05Z')).format('LL');
 
     // Convert markdown to html
     var desc = marked(release.body, { breaks: true });
