@@ -17,9 +17,11 @@ favicon: png
 # download.cdn.img is optional
 download:
   popup: true
-#  url: https://github.com/WixEdit/WixEdit/archive/master.zip
-  gh:
-    url: https://github.com/WixEdit/WixEdit/archive/master.zip
+  url: https://github.com/WixEdit/WixEdit/releases/download/v0.7.5.0/wixedit-0.7.5.msi
+  src:
+    url: https://github.com/WixEdit/WixEdit/releases/download/v0.7.5.0/wixedit-0.7.5-src.zip
+  bin:
+    url: https://github.com/WixEdit/WixEdit/releases/download/v0.7.5.0/wixedit-0.7.5-bin.zip
 #  bower: jekyll-bootstrap-doc
 #  npm: jekyll-bootstrap-doc
 #  cdn:
