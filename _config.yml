@@ -3,7 +3,7 @@ id: WixEdit/WixEdit
 # name of the software
 name: WixEdit
 # current version of the software
-version: 7.6.*
+version: 0.7.5
 # licence of the software
 license: MIT License
 licenseUrl: http://opensource.org/licenses/MIT
