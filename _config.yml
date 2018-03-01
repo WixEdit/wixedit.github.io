@@ -54,8 +54,8 @@ header:
 
 # google analytics
 analytics:
-  account:
-  domain:
+  account: UA-266970-1
+  domain: wixedit.github.io
 
 # github buttons
 githubButton:
