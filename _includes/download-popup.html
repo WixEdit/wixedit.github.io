@@ -1,96 +1,55 @@
 <div class="row">
-  {% if site.download.url %}
   <div class="col-sm-6">
     <div class="panel panel-default">
       <div class="panel-heading">MSI download</div>
       <div class="panel-body">
         <p>MSI installer with examples and wizard templates.</p>
-        <a href="{{site.download.url}}" class="btn btn-lg btn-outline">
+        <a id="msiDownloadLink" href="https://github.com/WixEdit/WixEdit/releases/latest" class="btn btn-lg btn-outline">
           <i class="glyphicon glyphicon-save"></i>
           Download
         </a>
+        <p><i id="msiDownloadCount"></i></p>
       </div>
     </div>
   </div>
-  {% endif %}
 
-  {% if site.download.src and site.download.src.url %}
   <div class="col-sm-6">
     <div class="panel panel-default">
       <div class="panel-heading">Sources download</div>
       <div class="panel-body">
         <p>Zip file containing sources.</p>
-        <a href="{{site.download.src.url}}" class="btn btn-lg btn-outline">
+        <a id="sourcesDownloadLink" href="https://github.com/WixEdit/WixEdit/releases/latest" class="btn btn-lg btn-outline">
           <i class="glyphicon glyphicon-save"></i>
           Download
         </a>
       </div>
     </div>
   </div>
-  {% endif %}
 
-  {% if site.download.bin and site.download.bin.url %}
   <div class="col-sm-6">
     <div class="panel panel-default">
       <div class="panel-heading">Binaries download</div>
       <div class="panel-body">
-        <pZip file containing binaries with examples and templates.</p>
-        <a href="{{site.download.bin.url}}" class="btn btn-lg btn-outline">
+        <p>Zip file containing binaries with examples and templates.</p>
+        <a id="binariesDownloadLink" href="https://github.com/WixEdit/WixEdit/releases/latest" class="btn btn-lg btn-outline">
           <i class="glyphicon glyphicon-save"></i>
           Download
         </a>
+        <p><i id="binariesDownloadCount"></i></p>
       </div>
     </div>
   </div>
-  {% endif %}
 
- {% if site.download.cdn and site.download.cdn.url %}
   <div class="col-sm-6">
     <div class="panel panel-default">
-      <div class="panel-heading">Content Delivery Network</div>
+      <div class="panel-heading">Other Version<>/div>
       <div class="panel-body">
-        <p>The package is available on {{site.download.cdn.name}}.</p>
-        {% if site.download.cdn.img %}
-        <a href="{{site.download.cdn.url}}" class="btn btn-lg btn-outline" style="max-width: 50%">
-          <img src="{{site.download.cdn.img}}" class="img-responsive"/>
+        <p>Browse for other versions.</p>
+        <a href="https://github.com/WixEdit/WixEdit/releases" class="btn btn-lg btn-outline">
+          <i class="glyphicon glyphicon-th-list"></i>
+          Browse
         </a>
-        {% else %}
-        <a href="{{site.download.cdn.url}}" class="btn btn-lg btn-outline">Download</a>
-        {% endif %}
       </div>
     </div>
   </div>
-  {% endif %}
-
-  {% if site.download.bower %}
-  <div class="col-sm-6">
-    <div class="panel panel-default">
-      <div class="panel-heading">Install with Bower</div>
-      <div class="panel-body">
-        <p>You can also get all necessary files and dependencies with <a href="http://bower.io">Bower</a>.</p>
-        <!-- @formatter:off -->
-{% highlight bash %}
-$ bower install {{site.download.bower}}
-{% endhighlight %}
-<!-- @formatter:on -->
-      </div>
-    </div>
-  </div>
-  {% endif %}
-
-  {% if site.download.npm %}
-  <div class="col-sm-6">
-    <div class="panel panel-default">
-      <div class="panel-heading">Install with npm</div>
-      <div class="panel-body">
-        <p>You can also get all necessary files and dependencies with <a href="https://www.npmjs.com">npm</a>.</p>
-        <!-- @formatter:off -->
-{% highlight bash %}
-$ npm install {{site.download.npm}}
-{% endhighlight %}
-<!-- @formatter:on -->
-      </div>
-    </div>
-  </div>
-  {% endif %}
 </div>
