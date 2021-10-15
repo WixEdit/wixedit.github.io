@@ -39,6 +39,15 @@
     // Exclude headers from side menu
     desc = desc.replace(/(<h[2-5])/g, '$1 data-no-menu');
 
+    var downloadCount = 0;
+    var asset;
+    var i;
+    for (i = 0; i < release.assets.length; i++)
+    {
+      asset = release.assets[i];
+      downloadCount += asset.download_count;
+    }
+
     // Build dom
     $('#releases').append(
       $('<section>')
@@ -58,7 +67,12 @@
                   $('<i>').addClass('glyphicon glyphicon-tag')
                 )
             ),
-          $('<article>').html(desc)
+          $('<article>').html(desc),
+          $('<p>').append(
+            $('<small>').append(
+              $('<i>').text('Downloaded ' + downloadCount + ' times')
+            )
+          )
         )
     );
   }
