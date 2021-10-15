@@ -41,8 +41,10 @@
 
     var downloadCount = 0;
     var asset;
-    for (asset in release.assets)
+    var i;
+    for (i = 0; i < release.assets.length; i++)
     {
+      asset = release.assets[i];
       downloadCount += asset.download_count;
     }
 
@@ -65,12 +67,12 @@
                   $('<i>').addClass('glyphicon glyphicon-tag')
                 )
             ),
+          $('<article>').html(desc),
           $('<p>').append(
             $('<small>').append(
               $('<i>').text('Downloaded ' + downloadCount + ' times')
             )
-          ),
-          $('<article>').html(desc)
+          )
         )
     );
   }

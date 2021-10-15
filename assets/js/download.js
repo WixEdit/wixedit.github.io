@@ -24,22 +24,26 @@
    * @param {object} release
    */
   function fillReleaseInfo(release) {
-    $('#currentRelease').text(release.tag_name);
+    $('#currentVersion').text('latest: ' + release.tag_name);
+    $('#download-popup').attr("title", 'Download ' + siteName + " " + release.tag_name)
 
-    $('sourcesDownloadLink').attr("href", release.zipball_url);
+    $('#sourcesDownloadLink').attr("href", release.zipball_url);
 
     var asset;
-    for (asset in release.assets)
+    var i;
+    for (i = 0; i < release.assets.length; i++)
     {
+      asset = release.assets[i];
+
       if (asset.name.endsWith('bin.zip'))
       {
-        $('binariesDownloadLink').attr("href", asset.browser_download_url);
-        $('binariesDownloadCount').text('Downloaded ' + asset.download_count + ' times.');
+        $('#binariesDownloadLink').attr("href", asset.browser_download_url);
+        $('#binariesDownloadCount').text('Downloaded ' + asset.download_count + ' times.');
       }
       else if (asset.name.endsWith('msi'))
       {
-        $('msiDownloadLink').attr("href", asset.browser_download_url);
-        $('msiDownloadCount').text('Downloaded ' + asset.download_count + ' times.');
+        $('#msiDownloadLink').attr("href", asset.browser_download_url);
+        $('#msiDownloadCount').text('Downloaded ' + asset.download_count + ' times.');
       }
     }
   }
