@@ -1,3 +1,3 @@
 source 'https://rubygems.org'
 gem 'github-pages'
-gem 'nokogiri', '1.18.4'
+gem 'nokogiri', '1.18.9'
